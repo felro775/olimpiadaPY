@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script defer src="{% static 'js/sidebar.js' %}"></script>
+</head>
+<body>
+    <div class="sidebar">
+       <h2>NOMOGRAMAS</h2>
+       <ul>
+            <li><a href="https://www.google.com" target="_blank">🌐 PAGINA PRINCIPAL</a></li>
+
+            <li class="menu-item">
+                <a href="#">📂 EJEMPLOS</a>
+                <ul class="submenu">
+                    <li><a href="{% url 'ejemplo1'  %}">-  Millas a Kms</a></li>
+                    <li><a href="">-  Numeros</a></li>
+                    <li><a href="">-  Ecuacion 2 Grado</a></li>                 >
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">📖 MAQUINAS Y EQUIPOS</a>
+                <ul class="submenu">
+
+                    <li><a href="{% url 'macargafron' %}">-  Cargadora Frontal</a></li>
+                    <li><a href="{% url 'mavolqueta' %}">-  Volqueta</a></li>
+                    <li><a href="{% url 'maexcavado' %}">-  Excavadora</a></li>
+                    <li><a href="{% url 'mamotonive' %}">-  Motoniveladora</a></li>
+                    <li><a href="{% url 'marodillo' %}">-  Rodillo Compac</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+        <br>
+        <br>
+
+      <div class="preview">
+            <h2><center>.............................................PLATAFORMA WEB PARA GENERAR NOMOGRAMAS DE RENDIMIENTO DE MAQUINARIAS</c>
+            <img src="{% static 'images/maqui1.jpg' %}" alt="Excavadora" class="preview-img" width="800" height="600">
+      </div>
+
+</body>
+</html>
