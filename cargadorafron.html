@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script defer src="{% static 'js/sidebar.js' %}"></script>
+</head>
+<body>
+    <div class="sidebar">
+       <h2>NOMOGRAMAS</h2>
+       <ul>
+            <li><a href="https://www.google.com" target="_blank">🌐 PAGINA PRINCIPAL</a></li>
+
+            <li class="menu-item">
+                <a href="#">📂 EJEMPLOS</a>
+                <ul class="submenu">
+                    <li><a href="">-  Millas a Kms</a></li>
+                    <li><a href="">-  Numeros</a></li>
+                    <li><a href="">-  Ecuacion 2 Grado</a></li>                 >
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">📖 MAQUINAS Y EQUIPOS</a>
+                <ul class="submenu">
+
+                    <li><a href="{% url 'macargafron' %}">-  Cargadora Frontal</a></li>
+                    <li><a href="{% url 'mavolqueta' %}">-  Volqueta</a></li>
+                    <li><a href="{% url 'maexcavado' %}">-  Excavadora</a></li>
+                    <li><a href="{% url 'mamotonive' %}">-  Motoniveladora</a></li>
+                    <li><a href="{% url 'marodillo' %}">-  Rodillo Compac</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+>
+
+      <div>
+        <center><h1>NOMOMOGRAMA             RENDIMIENTO PARA CARGADORA FRONTAL</h1></center>
+        <br><br>
+        <form action="/resultado/" method="post">
+        {% csrf_token %}
+        <center><label>    Q: Capacidad Nominal del Cucharon</label></center>
+        <br>
+        <center><input type="number" name="num1" placeholder="Capacidad Max" required></center>
+        <br>
+        <center><label> Cm: Tiempo Ciclo de Trabajo</label></center>
+        <br>
+        <center><input type="number" name="num2" placeholder="Tiempo Ciclo Max" required></center>
+        <br>
+        <center><button type="submit">Procesar</button></center>
+        </form>
+
+      </div>
+
+</body>
+</html>
