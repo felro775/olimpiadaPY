@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script defer src="{% static 'js/sidebar.js' %}"></script>
+</head>
+<body>
+    <div class="sidebar">
+       <h2>NOMOGRAMAS</h2>
+       <ul>
+            <li><a href="https://www.google.com" target="_blank">🌐 PAGINA PRINCIPAL</a></li>
+
+            <li class="menu-item">
+                <a href="#">📂 EJEMPLOS</a>
+                <ul class="submenu">
+                    <li><a href="{% url 'maexcavadora' %}">-  Millas a Kms</a></li>
+                    <li><a href="{% url 'maexcavadora' %}">-  Numeros</a></li>
+                    <li><a href="{% url 'maexcavadora' %}">-  Ecuacion 2 Grado</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">📖 MAQUINAS Y EQUIPOS</a>
+                <ul class="submenu">
+                    <li><a href="{% url 'maexcavadora' %}">-  Cargadora Frontal</a></li>
+                    <li><a href="{% url 'maexcavadora' %}">-  Volqueta</a></li>
+                    <li><a href="{% url 'maexcavadora' %}">-  Excavadora</a></li>
+                    <li><a href="{% url 'maexcavadora' %}">-  Motoniveladora</a></li>
+                </ul>
+            </li>
+
+       </ul>
+    </div>
+
+</body>
+</html>
